@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "vite": "^5.4.10"
+  },
+  "name": "costs-gerenciador-de-projetos-em-reactjs",
+  "version": "1.0.0",
+  "description": "Desenvolvimento de um sistema gerenciador de projetos feito em ReactJS",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
