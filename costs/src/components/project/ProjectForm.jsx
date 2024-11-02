@@ -1,8 +1,8 @@
-import style from './ProjectForm.module.css'
+import styles from './ProjectForm.module.css'
 
 export function ProjectForm(){
   return (
-    <div className={style.container}>
+    <div className={styles.container}>
       <form>
         <div>
          <input type='text' placeholder='Nome do projeto...'/>
