@@ -1,9 +1,22 @@
+
+import { useState } from 'react'
 import { Button } from '../form/Button'
 import Input from '../form/Input'
 import Select from '../form/Select'
 import styles from './ProjectForm.module.css'
 
+
+
 export function ProjectForm({btnText}){
+
+ const [categories, setCategories] = useState([]) 
+
+
+
+
+
+
+
   return (
     <div className={styles.container}>
       <form>
