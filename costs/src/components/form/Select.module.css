@@ -8,14 +8,11 @@
         font-weight: bold;
     }
 
-    input {
+    select {
         padding: .7em;
         border-radius: 0;
         border: none;
     }
 
-    input::placeholder{
-        color: #7b7b7b
-    }
 
 }

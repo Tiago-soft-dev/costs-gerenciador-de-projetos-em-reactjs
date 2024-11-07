@@ -6,7 +6,7 @@ export function NewProject(){
     <div className={style.container}>
       <h1>Criar Projeto</h1>
       <p>Crie seu projeto e adicione os serviços</p>
-      <ProjectForm />
+      <ProjectForm btnText='Criar Projeto'/>
     
     </div>
   )
