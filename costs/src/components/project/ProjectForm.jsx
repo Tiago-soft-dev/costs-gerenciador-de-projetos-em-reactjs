@@ -7,29 +7,10 @@ import styles from './ProjectForm.module.css'
 
 
 
-export function ProjectForm({btnText}){
+export function ProjectForm({handleSubmit, btnText, projectData}){
 
  const [categories, setCategories] = useState([]) 
-
-  // try {
-  //   const response = async () => {
-  //    await axios('http://localhost:5000/categories')
-    
-  //   setCategories(response.data)
-  //   }
-
-    
-
-  // } catch (error) {
-  //   console.log(error);
-  // }
-
-  // fetch('http://localhost:5000/categories', {
-  //   method: 'get',
-  //   headers: {
-  //     'Content-Type' : 'application/json',
-  //   },
-  // })
+ const [project, setProject] = useState(projectData || {})
     
   useEffect(()=>{
     fetch('http://localhost:5000/categories', {
@@ -45,20 +26,34 @@ export function ProjectForm({btnText}){
     .catch((err)=>console.log(err))
   }, [])
 
+    const submit = (e)=>{
+      e.preventDefault()
+      handleSubmit(project)
+    }
+
+    function handleChange(e){
+      setProject({...project, [e.target.name] : e.target.value})
+    }
+
+
   return (
     <div className={styles.container}>
-      <form>
+      <form onSubmit={submit}>
         <Input 
           type='text' 
           text='Nome do projeto' 
           name='name' 
-          placeholder='Nome do projeto...'/>
+          placeholder='Nome do projeto...'
+          handleOnChange={handleChange}
+          />
         
         <Input 
           type='number' 
           text='Orçamento do projeto' 
           placeholder='Orçamento do projeto...' 
-          name='budget'/>
+          name='budget'
+          handleOnChange={handleChange}
+          />
         
 
         {/* <div>
