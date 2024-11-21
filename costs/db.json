@@ -32,6 +32,22 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "febb",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "877e",
+      "name": "teste",
+      "budget": "2000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [
