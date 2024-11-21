@@ -4,7 +4,7 @@ import style from './NewProject.module.css'
 
 export function NewProject(){
 
-  const navigate = useNavigate
+  const navigate = useNavigate()
 
   function createPost(project){
     //initialize cost and services
@@ -21,6 +21,7 @@ export function NewProject(){
       .then((resp)=>resp.json())
       .then((data)=> {
         console.log(data);
+        navigate('/projects', {state : {message: "Projeto criado com sucesso!"}})
       })
       .catch((err)=>{
         console.log(err);

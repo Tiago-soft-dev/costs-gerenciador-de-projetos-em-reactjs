@@ -35,6 +35,16 @@ export function ProjectForm({handleSubmit, btnText, projectData}){
       setProject({...project, [e.target.name] : e.target.value})
     }
 
+    function handleCategory(e){
+      setProject({
+        ...project,
+        category: {
+          id: e.target.value,
+          name: e.target.options[e.target.selectedIndex].text,
+        },
+      })
+    }
+
 
   return (
     <div className={styles.container}>
@@ -45,6 +55,7 @@ export function ProjectForm({handleSubmit, btnText, projectData}){
           name='name' 
           placeholder='Nome do projeto...'
           handleOnChange={handleChange}
+          value={project.name ? project.name : ''}
           />
         
         <Input 
@@ -53,6 +64,7 @@ export function ProjectForm({handleSubmit, btnText, projectData}){
           placeholder='Orçamento do projeto...' 
           name='budget'
           handleOnChange={handleChange}
+          value={project.budget ? project.budget : ''}
           />
         
 
@@ -66,6 +78,8 @@ export function ProjectForm({handleSubmit, btnText, projectData}){
          name='category_id' 
          text='Selecione a categoria'
          options={categories}
+         handleOnChange={handleCategory}
+         value={project.category ? project.category.id: ''}
          />
 
         
