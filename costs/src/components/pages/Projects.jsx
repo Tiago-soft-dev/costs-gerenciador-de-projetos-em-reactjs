@@ -53,14 +53,17 @@ export function Projects(){
         {projects.length > 0 &&
         
           projects.map((item)=>(
-            
+            <>
+            {console.log(item)}
             <ProjectCard 
+            
             key={item.id}
             id={item.id} 
             name={item.name} 
             budget={item.budget}
-            category={item.categories?.name || 'Categoria não definida'}
+            category={item.category?.name || 'Categoria não definida'}
             />
+            </>
         ))}
      </Container>
     </div>
